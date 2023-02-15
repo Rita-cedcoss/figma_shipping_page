@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 const OrderReview = () => {
   const [flag, setFlag] = useState({ show: "none", count: false });
   const boxRef = useRef<any>([]);
+  // for collapse 
   const collapsable = (ind: any) => {
     if (!flag.count) {
       boxRef.current[ind].classList.remove("none");
@@ -16,6 +17,7 @@ const OrderReview = () => {
   };
   return (
     <>
+    {/* orderReview */}
       <div className="orderReview">
         <div className="orderReview--card" onClick={() => collapsable(0)}>
           <div>
@@ -36,6 +38,7 @@ const OrderReview = () => {
           </p>
         </div>
       </div>
+      {/* discount block */}
       <div className="orderReview orderReview--margin">
         <div className="orderReview--card" onClick={() => collapsable(1)}>
           <div>
@@ -63,7 +66,7 @@ const OrderReview = () => {
           </div>
           <i className="fa fa-caret-down"></i>
         </div>
-        <div className=" " ref={(ref) => (boxRef.current[2] = ref)} id="bill">
+        <div className="block" ref={(ref) => (boxRef.current[2] = ref)} id="bill">
           <div className="orderReview__summarybox">
             <div className="orderReview__bottom">
               <p>Subtotal</p> <p>$3720,27</p>
