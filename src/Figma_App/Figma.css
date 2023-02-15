@@ -4,10 +4,12 @@
 }
 .container {
     min-height: 500px;
-    max-width: 1920px;
+    max-width: 1200px;
     padding: 40px 100px 10px 100px;
-   background-color: #F6F6F6; 
+    background-color: #F6F6F6; 
+    font-family: cursive;
 }
+/* navbar css */
 .navbar {
     min-height:50px;
     max-width: 1200px;
@@ -16,37 +18,51 @@
     padding: 0px 5px 0px 5px;
     color: #4F4F4F;
 }
+
+.navbar__top {
+    margin-top: 8px;
+}
+
 .navbar__btn {
     color: #2F80ED;
+    padding-left: 8px;
 }
+/* billing Form */
 .billing {
     display: flex;
     min-height: 300px;
-    justify-content: space-around;
-
-    /* background-color: red; */
+    justify-content: space-between;
 }
+
+.billing_left {
+    width: 50%;
+}
+
 .billing__form {
-    width: 600px;
+    width: 100%;
     margin-top: 34px;
-    /* background-color: red; */
     border-radius: 4px;
     padding: 25px 5px 25px 5px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
+
 .billing__summary {
-    width:500px;
+    width:45%;
     margin-top: 35px;
-    /* background-color: blue; */
 }
 .billing__box {
     display: flex;
+    direction: row;
     justify-content: space-between;
     padding: 20px;
     position: relative;
 }
+.label1 {
+    position:relative;
+    padding: 0% 2% 0% 2%;
+}
 .billing__input {
-    min-width: 245px;
+    width: 90%;
     min-height: 44px;
     border: 1px solid rgb(146, 145, 145);
     border-radius: 5px;
@@ -54,36 +70,40 @@
     font-size: 18px;
     color: #3a3737;
 }
-.billing__input2 {
-    min-width: 533px;
-    min-height: 44px;
-    border: 1px solid rgb(146, 145, 145);
-    border-radius: 5px;
-    padding: 10px 0px 0px 20px;
-    font-size: 18px;
-    color: #3a3737;
 
+.billing__input2 {
+    width: 95%;
+    min-height: 44px;
+    margin: 0% 3%;
+    border: 1px solid rgb(146, 145, 145);
+    border-radius: 5px;
+    padding: 10px 0px 0px 20px;
+    font-size: 18px;
+    color: #3a3737;
 }
+
 .billing__label {
     position: absolute;
-    top: 10px;
-    left: 40px;
+    top: -11px;
+    left: 20px;
     color: #828282;
     background: white;
     padding: 0px 2px 0px 2px;
 }
+
 .billing__email{
     position: absolute;
     top: 10px;
-    left: 40px;
+    left: 47px;
     color: #828282;
     background: white;
     padding: 0px 2px 0px 2px;
 }
+
 .billing__label1 {
     position: absolute;
-    top: 10px;
-    left: 343px;
+    top: -12px;
+    left: 20px;
     color: #828282;
     background: white;
     padding: 0px 2px 0px 2px;
@@ -93,7 +113,9 @@
     line-height: 30px;
     color: #828282;
     font-size: 14px;
+    margin-left: 10px;
 }
+/*for shipping component */
 .billing__shipping {
     display: flex;
     justify-content: space-around;
@@ -119,29 +141,28 @@
     justify-content: space-between;
     align-items: center;
     color: #4F4F4F;
-
     padding: 0px 0px 20px 0px;
 }
 .billing__box--pay {
     padding: 20px 0px 20px 0px !important;
 }
+.billing__none {
+    border: none;
+}
 .billing__label--card {
     left: 20px !important;
     background: #e4e8f7 !important;
-    /* background: #9bcbed47 !important; */
 }
 .billing__label1--date {
-    /* top: 20px !important; */
-    left: 320px !important;
+    left: 15px !important;
     background: #e4e8f7 !important;
-    /* background: #9bcbed47 !important; */
 }
 .billing__input--pay {
     background-color: #9bcbed17 !important;
 }
 .billing__label1--text {
       top: 20px !important;
-    left: 310px !important;
+      margin-right: 150px;
     color: #2F80ED;
     background-color: #9bcbed17 !important;
 }
@@ -162,17 +183,26 @@
     margin-right: 4px;
     font-size: 14px;
 }
-
+/* orderReview Component */
 .orderReview {
     min-height: 60px;
     padding: 10px 20px 10px 20px;
     line-height: 2;
     margin-left: 30px;
     background-color: snow;
-    display: flex;
+
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-    justify-content: space-between;
-    align-items: center;
+}
+.orderReview--card {
+        display: flex; 
+     justify-content: space-between;
+     align-items: center;
+}
+.none{
+    display:none ;
+}
+.block {
+    display: block;
 }
 .orderReview--margin {
     margin-top: 45px;
@@ -184,9 +214,7 @@
     margin-top: 45px;
     margin-left: 30px;
     background-color: snow;
-    /* display: flex; */
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-
 }
 .orderReview__bottom {
     display: flex;
@@ -198,6 +226,7 @@
     border-bottom: 1px solid #e1d8d8;
     padding: 10px 0px 15px 0px;
     line-height: 3;
+    color: grey;
 }
 .orderReview__Comment {
     position: relative;
@@ -207,14 +236,15 @@
     top: 13px;
     background: white;
     left: 25px;
-
+    color: grey;
 }
 .orderReview__textarea {
     min-height: 50px;
-    width: 390px;
+    width: 93%;
     border-radius: 5px;
     padding: 20px 0px 10px 10px;
     margin: 30px 10px 10px 10px;
+    color:grey;
 }
 .orderReview__btn {
     height: 50px;
@@ -225,5 +255,47 @@
     background: linear-gradient(137.27deg, #2F88FF 19.41%, #1D68CD 65.49%);
     font-size: 20px;
     border-radius: 6px;
+}
+.checkbox {
+    margin: 0% 3%;
+}
 
+.orderReview__checkbox {
+    justify-content: space-around;
+    padding-left: 10px;
+    color: grey;
+}
+/* for Responsiveness */
+
+@media screen and (max-width: 980px) {
+    .billing {
+        flex-direction: column;
+    }
+    .billing_left {
+        width: 100%;
+    }
+    .billing__summary{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+ .container {
+    padding: 40px 20px 10px 20px;
+ }
+}
+
+@media screen  and (max-width:450px) {
+    .billing__box{
+        flex-direction: column;
+    }
+    .label1{
+        margin-top: 25px;
+    }
+    .billing__input{
+        width: 98%;
+    }
+    .billing__input--pay {
+        width: 90%!important;
+    }
 }

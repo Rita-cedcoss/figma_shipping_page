@@ -50,23 +50,32 @@ const Payment = () => {
           </div>
         </div>
         <div className="billing__box billing__box--pay">
-          <span className="billing__label billing__label--card">
-            Card Number
-          </span>
-          <input className="billing__input billing__input--pay" />
-          <span className="billing__label1 billing__label1--date">
-            Expiration Date
-          </span>
-          <input className="billing__input billing__input--pay" />
+          <div className="label1">
+            <span className="billing__label billing__label--card">
+              Card Number
+            </span>
+            <input className="billing__input billing__input--pay" />
+          </div>
+          <div className="label1">
+            <span className="billing__label1 billing__label1--date">
+              Expiration Date
+            </span>
+            <input className="billing__input billing__input--pay" />
+          </div>
         </div>
         <div className="billing__box billing__box--pay">
-          <span className="billing__label billing__label--card">
-            Card Security Code
-          </span>
-          <input className="billing__input billing__input--pay" />
-          <span className="billing__label1 billing__label1--text">
-            What is this?
-          </span>
+          <div className="label1">
+            <span className="billing__label billing__label--card">
+              Card Security Code
+            </span>
+            <input className="billing__input billing__input--pay" />
+          </div>
+          <div className="label1">
+            <span className="billing__label billing__label--card">
+              What is this?
+            </span>
+            <input className="billing__input billing__input--pay billing__none" />
+          </div>
         </div>
       </div>
       <div className="billing__lockbt">
