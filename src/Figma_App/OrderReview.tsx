@@ -99,7 +99,7 @@ const OrderReview = () => {
             <button className="orderReview__btn"> Pay $3,349.00</button>
           </div>
           <div style={{ textAlign: "center" }}>
-            <img src="Norton Icon.png" height="30px" width="100px" />
+            <img src="Norton Icon.png" height="30px" width="100px" alt=""/>
           </div>
         </div>
       </div>

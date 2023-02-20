@@ -5,9 +5,10 @@
 .container {
     min-height: 500px;
     max-width: 1200px;
+    margin: auto;
     padding: 40px 100px 10px 100px;
     background-color: #F6F6F6; 
-    font-family: cursive;
+    font-family: sans-serif;
 }
 /* navbar css */
 .navbar {
